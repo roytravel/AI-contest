@@ -27,5 +27,5 @@ def apk(actual, predicted, k=7, default=0.0):
 
 def mapk(actual, predicted, k=7, default=0.0):
     # list of list인 정답 값(actual)과 예측 값(predicted)에서
-    # 고객별 Average Precision을 구하고, np.mean()을 통해 평균을 계싼
+    # 고객별 Average Precision을 구하고, np.mean()을 통해 평균을 계산
     return np.mean([apk(a, p, k, default) for a, p in zip(actual, predicted)])
